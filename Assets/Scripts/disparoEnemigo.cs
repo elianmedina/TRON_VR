@@ -10,7 +10,7 @@ public class disparoEnemigo : MonoBehaviour
     float temporizador;
 
     public float tiempoEntreBala = 5;
-    public float sumandoAleatorio = 1;
+    public float sumandoAleatorio = 4;
 
     public ProceduralEnemigos cantidadEnemigos;
 
@@ -20,7 +20,8 @@ public class disparoEnemigo : MonoBehaviour
     void Start()
     {
          temporizador = 0f;
-         cantidadEnemigos = FindObjectOfType<ProceduralEnemigos>();
+         tiempoEntreBala = obtenerTiempoAleatorio();
+         
 
     }
 
@@ -28,15 +29,8 @@ public class disparoEnemigo : MonoBehaviour
     void Update()
     {
         temporizador += Time.deltaTime;
+        bool seInvocoEnemigo = cantidadEnemigos.getInvocacion();
         
-        if(cantidadEnemigos.seInvocoEnemigo == true){
-
-            tiempoEntreBala = obtenerTiempoAleatorio();
-            sumandoAleatorio = obtenerNumeroAleatorio();
-        }
-        if(cantidadEnemigos.contadorEnemigos % 5 == 0){
-            tiempoEntreBala = tiempoEntreBala + (sumandoAleatorio);
-        }
 
         Debug.Log (temporizador);
 
@@ -44,7 +38,7 @@ public class disparoEnemigo : MonoBehaviour
             //Instantiate(misilPrefab, Vector2.zero, Quaternion.identity);
             var proyectilLaser = Instantiate(proyectilLaserPrefab,puntoAparicion.transform.position,puntoAparicion.transform.rotation);
             proyectilLaser.GetComponent<Rigidbody>().velocity = (transform.forward * -1) * velocidad  +
-          Random.insideUnitSphere ;
+            Random.insideUnitSphere ;
             temporizador = 0;
         }
     }
@@ -59,7 +53,9 @@ public class disparoEnemigo : MonoBehaviour
     }
 
     public float obtenerNumeroAleatorio(){
-        float ramdomSumando = Random.Range(2f,4f);
+        float ramdomSumando = Random.Range(3f,6f);
         return ramdomSumando;
     }
+
+    
 }

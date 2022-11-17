@@ -9,9 +9,8 @@ public class ProceduralEnemigos : MonoBehaviour
     public bool invocarEnemigo;
     public float cronometro;
     public float tiempoInvocar, intervalo;
-    public int contadorEnemigos;
 
-    public bool seInvocoEnemigo;
+    public bool seInvocoEnemigo = false;
 
     public float probabilidadAparicion = 0.75f;
 
@@ -19,10 +18,7 @@ public class ProceduralEnemigos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-
-
+        
     }
 
     // Update is called once per frame
@@ -32,7 +28,7 @@ public class ProceduralEnemigos : MonoBehaviour
         
         if (invocarEnemigo== true)
         {
-            if(contadorEnemigos <= 10){
+            
                 PuntoAparicion = transform.GetChild(Random.Range(0, 4)).gameObject; // 0 a 4 corresponde al total de puntos posibles de aparición
                 float tiempoVida = cronometro;
                 if (Random.Range(0f, 5f) <= probabilidadAparicion)
@@ -40,11 +36,11 @@ public class ProceduralEnemigos : MonoBehaviour
                     Instantiate(objeto[Random.Range(0, objeto.Length)],
                     PuntoAparicion.transform.position, Quaternion.Euler(Vector3.up * (Random.Range(0, 4) * 90)));
                     invocarEnemigo = false;
-                    contadorEnemigos ++;
+                    
                     seInvocoEnemigo = true;
                 }
                     seInvocoEnemigo = false;
-            }
+            
         }
 
 
@@ -62,7 +58,8 @@ public class ProceduralEnemigos : MonoBehaviour
             }
         }
 
-
-
+    }
+    public bool getInvocacion(){
+    return seInvocoEnemigo;
     }
 }

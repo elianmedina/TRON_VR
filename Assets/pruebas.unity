@@ -383,8 +383,10 @@ MonoBehaviour:
   PuntoAparicion: {fileID: 259171900}
   invocarEnemigo: 0
   cronometro: 0
-  tiempoInvocar: 8
+  tiempoInvocar: 15
   intervalo: 0
+  contadorEnemigos: 0
+  seInvocoEnemigo: 0
   probabilidadAparicion: 0.75
 --- !u!4 &259171902
 Transform:
@@ -2690,6 +2692,8 @@ MonoBehaviour:
   proyectilLaserPrefab: {fileID: 505210330}
   velocidad: 15
   tiempoEntreBala: 2
+  sumandoAleatorio: 4
+  cantidadEnemigos: {fileID: 259171901}
 --- !u!114 &1959067129
 MonoBehaviour:
   m_ObjectHideFlags: 0
