@@ -40,6 +40,7 @@ public class disparoEnemigo : MonoBehaviour
             proyectilLaser.GetComponent<Rigidbody>().velocity = (transform.forward * -1) * velocidad  +
             Random.insideUnitSphere ;
             temporizador = 0;
+            Destroy(proyectilLaser, 5);
         }
     }
 

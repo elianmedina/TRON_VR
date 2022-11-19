@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - RashoLaser
+  - bala
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Movimiento
   - Water
   - UI
   - 
