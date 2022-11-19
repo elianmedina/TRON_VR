@@ -30,7 +30,8 @@ public class REACCIONBALASENEMIGOS : MonoBehaviour
         {
             disparos.vidasTotales -= 1;
             hitSound.Play();
-
+            Destroy(other.gameObject,1);
         }
+
     }
 }
