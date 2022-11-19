@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Disparar : MonoBehaviour
 {
+
     public GameObject bullet;
     public Transform spawnPoint;
     public float firespeed = 20;
@@ -14,20 +15,23 @@ public class Disparar : MonoBehaviour
     public AnimateHandOnInput obtenerDisparo;
     public int puntosTotales;
     public Text puntosText;
-
+    public AudioSource audioDisparo;
     public Text vidasText;
     public int vidasTotales;
     void Start()
     {
         puntosTotales = 0;
         vidasTotales = 5;
+        audioDisparo = gameObject.GetComponent<AudioSource>();
 }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(obtenerDisparo.getDisparar() == true)
+
+        FireBullet();
+
+        if (obtenerDisparo.getDisparar() == true)
         {
             FireBullet();
         }
@@ -46,8 +50,9 @@ public class Disparar : MonoBehaviour
 
     public void FireBullet()
     {
-        if(Time.time > ultimoEnter + 0.15f)
+        if(Time.time > ultimoEnter + 1.5f)
         {
+            audioDisparo.Play();
             GameObject spawnedBullet = Instantiate(bullet);
             spawnedBullet.transform.position = spawnPoint.position;
             spawnedBullet.transform.rotation = spawnPoint.rotation;
