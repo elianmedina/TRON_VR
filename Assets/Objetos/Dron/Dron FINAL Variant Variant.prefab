@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5310639595795589422
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 315535196680582298, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_Name
+      value: Dron FINAL Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092915908423659040, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507427290577285782, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875189037479678494, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 109ed353d287bd74e9a1694f79c38fc1, type: 3}
+    m_RemovedComponents:
+    - {fileID: 6875189037479678494, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+--- !u!1 &5607596187734662580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 315535196680582298, guid: 30c77d7649c6243408c2a0731161b40c, type: 3}
+  m_PrefabInstance: {fileID: 5310639595795589422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1512526411
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5607596187734662580}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.15, y: 2.64, z: 0.9565733}
+  m_Center: {x: 0.11, y: -0, z: 0}

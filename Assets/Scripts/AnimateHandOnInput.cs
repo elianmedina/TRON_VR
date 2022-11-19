@@ -40,10 +40,15 @@ public class AnimateHandOnInput : MonoBehaviour
        float gripValue = grip.action.ReadValue<float>();
         animator.SetFloat("Grip", gripValue);
 
-        if (gripValue >= 0.8f)
+        if (gripValue >= 0.8f && gripValue <= 0.9f)
         {
             seDisparo = true;
-            Debug.Log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+
+
+        }
+        else
+        {
+            seDisparo = false;
         }
         
 

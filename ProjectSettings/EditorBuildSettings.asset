@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainVR.unity
     guid: 32b5d25cb0a5d664f9f20e9a3b86d30a
+  - enabled: 1
+    path: Assets/Scenes/EscenaFinal.unity
+    guid: 319dafa5c80f29f428dc1e0d03f04177
+  - enabled: 1
+    path: Assets/Scenes/PerdisteEscena.unity
+    guid: aaa3011d38da3cb409f5da6cb285dc54
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d35345db9e5e6394ab20f7dfdbb92819, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 333a70ad7855b4e46856db7f6eb78aeb, type: 2}
