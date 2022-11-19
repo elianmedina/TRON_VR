@@ -29,11 +29,12 @@ public class Disparar : MonoBehaviour
     void Update()
     {
 
-        FireBullet();
+        
 
         if (obtenerDisparo.getDisparar() == true)
         {
             FireBullet();
+            obtenerDisparo.seDisparo = false;
         }
         puntosText.text = puntosTotales.ToString();
         vidasText.text = vidasTotales.ToString();
@@ -44,23 +45,23 @@ public class Disparar : MonoBehaviour
         }
         if (vidasTotales <= 0)
         {
-            SceneManager.LoadScene("MainVR");
+            SceneManager.LoadScene("PerdisteEscena");
         }
     }
 
     public void FireBullet()
     {
-        if(Time.time > ultimoEnter + 1.5f)
-        {
+      
+            
             audioDisparo.Play();
             GameObject spawnedBullet = Instantiate(bullet);
             spawnedBullet.transform.position = spawnPoint.position;
             spawnedBullet.transform.rotation = spawnPoint.rotation;
             spawnedBullet.GetComponent<Rigidbody>().velocity = (spawnPoint.up * -1) * firespeed;
             Destroy(spawnedBullet, 2);
-            obtenerDisparo.seDisparo = false;
-            ultimoEnter = Time.time;
-        }
+            
+          
+      
        
        
 
