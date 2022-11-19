@@ -12,6 +12,7 @@ public class disparoEnemigo : MonoBehaviour
     public float tiempoEntreBala = 5;
     public float sumandoAleatorio = 4;
 
+    public GameObject cantidadEnemigosObj;
     public ProceduralEnemigos cantidadEnemigos;
 
 
@@ -19,6 +20,9 @@ public class disparoEnemigo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+         cantidadEnemigosObj = GameObject.Find("PuntosAparicion");
+
+         cantidadEnemigos = cantidadEnemigosObj.GetComponent<ProceduralEnemigos>();
          temporizador = 0f;
          tiempoEntreBala = obtenerTiempoAleatorio();
          

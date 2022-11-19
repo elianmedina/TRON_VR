@@ -11,7 +11,7 @@ public class mirarAJugador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        jugador = GameObject.Find("XR Origin");
     }
 
     // Update is called once per frame
