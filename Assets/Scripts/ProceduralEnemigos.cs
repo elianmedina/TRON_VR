@@ -34,7 +34,7 @@ public class ProceduralEnemigos : MonoBehaviour
                 if (Random.Range(0f, 5f) <= probabilidadAparicion)
                 {
                     Instantiate(objeto[Random.Range(0, objeto.Length)],
-                    PuntoAparicion.transform.position, Quaternion.Euler(Vector3.up * (Random.Range(0, 4) * 90)));
+                    PuntoAparicion.transform.position, Quaternion.Euler(Vector3.forward * (Random.Range(0, 4) * 90)));
                     invocarEnemigo = false;
                     
                     seInvocoEnemigo = true;
